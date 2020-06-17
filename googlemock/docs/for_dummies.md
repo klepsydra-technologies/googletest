@@ -213,7 +213,7 @@ specific domain much better than `Foo` does.
 Once you have a mock class, using it is easy. The typical work flow is:
 
 1.  Import the gMock names from the `testing` namespace such that you can use
-    them unqualified (You only have to do it once per file. Remember that
+    them unqualified (You only have to do it once per file). Remember that
     namespaces are a good idea.
 2.  Create some mock objects.
 3.  Specify your expectations on them (How many times will a method be called?
@@ -257,8 +257,8 @@ Stack trace:
 ...
 ```
 
-**Tip 1:** If you run the test from an Emacs buffer, you can hit <Enter> on the
-line number to jump right to the failed expectation.
+**Tip 1:** If you run the test from an Emacs buffer, you can hit `<Enter>` on
+the line number to jump right to the failed expectation.
 
 **Tip 2:** If your mock objects are never deleted, the final verification won't
 happen. Therefore it's a good idea to turn on the heap checker in your tests
@@ -374,7 +374,7 @@ convenient way of saying "any value".
 In the above examples, `100` and `50` are also matchers; implicitly, they are
 the same as `Eq(100)` and `Eq(50)`, which specify that the argument must be
 equal (using `operator==`) to the matcher argument. There are many
-[built-in matchers](#MatcherList) for common types (as well as
+[built-in matchers](cheat_sheet.md#MatcherList) for common types (as well as
 [custom matchers](cook_book.md#NewMatchers)); for example:
 
 ```cpp
